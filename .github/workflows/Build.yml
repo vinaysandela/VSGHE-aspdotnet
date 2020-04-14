@@ -16,8 +16,8 @@ jobs:
         username: ${{ secrets.REGISTRY_USERNAME }}
         password: ${{ secrets.REGISTRY_PASSWORD }}
     - run: |
-        docker build -t VSGHE-aspdotnet .
-        docker tag VSGHE-aspdotnet vsazurecr.azurecr.io/vsaspdotnet:v1.1
+        docker build -t vsaspdotnet .
+        docker tag vsaspdotnet vsazurecr.azurecr.io/vsaspdotnet:v1.1
         docker push vsazurecr.azurecr.io/vsaspdotnet:v1.1
   #    docker build . -t vsazurecr.azurecr.io/vsdotnetapp:1.0.0
   #    docker push vsazurecr.azurecr.io/vsdotnetapp:1.0.0
